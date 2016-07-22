@@ -130,6 +130,7 @@ class Chef
       #
       def read_and_validate_params
         if @name_args.length < 1
+          ui.fatal "You must specify the name of the virtual machine with --name"
           show_usage
           exit 1
         end
